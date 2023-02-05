@@ -1,0 +1,12 @@
+html {
+    height: 100%;
+}
+
+body {
+    background: linear-gradient(45deg, CornflowerBlue, #21304d);
+    font-family: 'Comfortaa', cursive;
+}
+
+a {
+    color: rgb(15, 212, 203);
+}

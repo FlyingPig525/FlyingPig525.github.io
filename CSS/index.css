@@ -1,0 +1,43 @@
+@font-face {
+    font-family: Hand;
+    src: url(./../Fonts/Myfont-Regular.ttf);
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    background: linear-gradient(-45deg, #35577D, #3c7a64);
+    color: #fff;
+    padding: 0px;
+    margin: 0px;
+    font-family: Hand;
+}
+
+h1 {
+    font-size: 200px;
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+    font-size: 50px;
+}
+
+p {
+    text-align: center;
+}
+
+a {
+    color: rgb(15, 212, 203);
+}
+
+.center-img {
+    text-align: center;
+}
+
+.links {
+    text-align: center;
+
+}
