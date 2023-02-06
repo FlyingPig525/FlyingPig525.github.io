@@ -61,7 +61,8 @@ p {
 }
 
 a {
-    color: rgb(15, 212, 203);
+    color: aqua;
+    transition: color 1s ease-out 100ms;
 }
 
 h3 {
@@ -75,13 +76,26 @@ h3 {
 
 .banner {
     margin: 0px;
+    color: white;
+    transition: color 1s ease-out 100ms;
+}
+
+.banner:hover {
+    color: aquamarine;
 }
 
 .links {
     text-align: center;
-    animation-name: links;
-    animation-duration: 2;
-    animation-timing-function: ease;
-    animation-iteration-count: 10;
+}
 
+.links .YT:hover {
+    color: #00ffa6;
+}
+
+.links .git:hover {
+    color: #00ffa6;
+}
+
+.links .git2:hover {
+    color: #00ffa6;
 }
