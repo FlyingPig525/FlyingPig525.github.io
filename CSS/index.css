@@ -14,12 +14,25 @@ body {
     margin: 0px;
     font-family: Hand;
     animation-name: slideIn;
-    animation-duration: 2s;
+    animation-duration: 1.5s;
     -ms-overflow-style: none;
     scrollbar-width: none;
     overflow-y: hidden; 
     
     
+}
+
+@keyframes slideIn {
+    from {
+        margin-top: -200%;
+        margin-right: -500%;
+        transform: rotate(180deg);
+    }
+    
+    to {
+        margin-left: 0%;
+        transform: rotate(0deg);
+    }
 }
 
 body::-webkit-scrollbar {
@@ -39,6 +52,7 @@ h2 {
 p {
     text-align: center;
     font-size: 30px;
+    font-weight: bold;
 }
 
 a {
@@ -60,17 +74,4 @@ h3 {
 
 .banner {
     margin: 0px;
-}
-
-@keyframes slideIn {
-    from {
-        margin-top: -200%;
-        margin-right: -500%;
-        transform: rotate(180deg);
-    }
-    
-    to {
-        margin-left: 0%;
-        transform: rotate(0deg);
-    }
 }
