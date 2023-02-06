@@ -86,6 +86,7 @@ h3 {
 
 .links {
     text-align: center;
+    transition: color 1s ease-out 100ms;
 }
 
 .links .YT:hover {
