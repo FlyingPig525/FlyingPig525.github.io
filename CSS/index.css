@@ -7,31 +7,36 @@ html {
     height: 100%;
 }
 
+
 body {
     background: linear-gradient(-45deg, #35577D, #3c7a64);
     color: #fff;
     padding: 0px;
     margin: 0px;
     font-family: Hand;
-    animation-name: slideIn;
-    animation-duration: 1.5s;
     -ms-overflow-style: none;
     scrollbar-width: none;
     overflow-y: hidden; 
-    
+}
+
+.anim {
+    animation-name: slideIn;
+    animation-duration: 3s;
+    animation-timing-function: cubic-bezier(.25,.1,.25,1);
     
 }
 
 @keyframes slideIn {
     from {
         margin-top: -200%;
-        margin-right: -500%;
         transform: rotate(180deg);
     }
     
     to {
         margin-left: 0%;
+        margin-top: 0%;
         transform: rotate(0deg);
+        
     }
 }
 
@@ -67,11 +72,16 @@ h3 {
     text-align: center;
 }
 
-.links {
-    text-align: center;
-
-}
 
 .banner {
     margin: 0px;
+}
+
+.links {
+    text-align: center;
+    animation-name: links;
+    animation-duration: 2;
+    animation-timing-function: ease;
+    animation-iteration-count: 10;
+
 }
