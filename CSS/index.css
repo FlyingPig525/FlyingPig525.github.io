@@ -16,14 +16,14 @@ body {
     font-family: Hand;
     -ms-overflow-style: none;
     scrollbar-width: none;
-    overflow-y: hidden; 
+    overflow-y: hidden;
 }
 
 .anim {
     animation-name: slideIn;
     animation-duration: 3s;
-    animation-timing-function: cubic-bezier(.25,.1,.25,1);
-    
+    animation-timing-function: cubic-bezier(.25, .1, .25, 1);
+
 }
 
 @keyframes slideIn {
@@ -31,12 +31,12 @@ body {
         margin-top: -200%;
         transform: rotate(180deg);
     }
-    
+
     to {
         margin-left: 0%;
         margin-top: 0%;
         transform: rotate(0deg);
-        
+
     }
 }
 
@@ -61,8 +61,12 @@ p {
 }
 
 a {
-    color: aqua;
-    transition: color 1s ease-out 100ms;
+    color: rgb(0, 180, 180);
+    transition: color 0.5s ease-out 100ms;
+}
+
+a:hover {
+    color: #00ffa6;
 }
 
 h3 {
@@ -86,17 +90,4 @@ h3 {
 
 .links {
     text-align: center;
-    transition: color 1s ease-out 100ms;
-}
-
-.links .YT:hover {
-    color: #00ffa6;
-}
-
-.links .git:hover {
-    color: #00ffa6;
-}
-
-.links .git2:hover {
-    color: #00ffa6;
 }
