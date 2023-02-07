@@ -62,11 +62,13 @@ p {
 
 a {
     color: rgb(0, 180, 180);
-    transition: color 0.5s ease-out 100ms;
+    transition: all 1s cubic-bezier(0.02, 0.22, 0.07, 0.93) 100ms;
 }
 
 a:hover {
     color: #00ffa6;
+    margin: 0.25%;
+    font-size: 110%;
 }
 
 h3 {
@@ -81,11 +83,13 @@ h3 {
 .banner {
     margin: 0px;
     color: white;
-    transition: color 1s ease-out 100ms;
+    transition: all 1s cubic-bezier(0.02, 0.22, 0.07, 0.93) 100ms;
 }
 
 .banner:hover {
     color: aquamarine;
+    font-size: 230px;
+    transform: rotate(3deg);
 }
 
 .links {
