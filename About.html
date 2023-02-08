@@ -11,14 +11,84 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link href="./CSS/about.css" rel="stylesheet">
 
+<style>
+    :root {
+        --dark-color: #69ff5c;
+        --light-color: #5fdfa9;
+    }
+
+    svg {
+        cursor: pointer;
+    }
+
+    #darkGroup {
+        fill: var(--dark-color);
+    }
+
+    #lightGroup {
+        fill: var(--light-color);
+    }
+
+    #light1,
+    #dark1,
+    #light2 {
+        transition: all 1s ease;
+    }
+
+    #light2 {
+        transform: translateX(-100%);
+    }
+
+    .svg:hover #light1,
+    #dark1,
+    #light2 {
+        transform-origin: center;
+        transform: rotateY(90deg);
+    }
+
+    .svg:hover #dark1 {
+        transform: translateX(20%);
+    }
+
+    .svg:hover #light1 {
+        transform: translateX(40%);
+        opacity: 0;
+    }
+
+    .svg:hover #light2 {
+        transform: translateX(5%);
+    }
+</style>
+
 <body>
 
     <!-- TYPE TEXT ELEMENTS IN CAPS -->
     <!-- "i" = "(", "o" = ")" -->
 
-    <h1>HOw dId yOu get here</h1>
-    <p>THIS IS A NEW PAGE, CLICK <a href="./index.html">THIS</a> TO GO BACK</p>
-    <img src="./Images/Hey---dont-look-in-here/Horse.jpg" width="50" height="50">
+    <svg width="1200" height="1000" viewBox="0 0 120 100" fill="none" xmlns="http://www.w3.org/2000/svg" class="svg">
+        <rect width="120" height="100" fill="#1E1E1E" />
+        <g id="Triangles" clip-path="url(#clip0_0_1)">
+            <g id="lightGroup">
+                <path id="light1"
+                    d="M56.5 49.134C57.1667 49.5189 57.1667 50.4811 56.5 50.866L22 70.7846C21.3333 71.1695 20.5 70.6884 20.5 69.9186V30.0814C20.5 29.3116 21.3333 28.8305 22 29.2154L56.5 49.134Z"
+                    fill-opacity="0.5" />
+                <path id="light2"
+                    d="M41.5 49.134C42.1667 49.5189 42.1667 50.4811 41.5 50.866L7 70.7846C6.33333 71.1695 5.5 70.6884 5.5 69.9186V30.0814C5.5 29.3116 6.33333 28.8305 7 29.2154L41.5 49.134Z"
+                    fill-opacity="0.5" />
+            </g>
+            <g id="darkGroup">
+                <path id="dark1"
+                    d="M41.5 49.134C42.1667 49.5189 42.1667 50.4811 41.5 50.866L7 70.7846C6.33333 71.1695 5.5 70.6884 5.5 69.9186V30.0814C5.5 29.3116 6.33333 28.8305 7 29.2154L41.5 49.134Z"
+                    fill-opacity="0.5" />
+            </g>
+        </g>
+        <defs>
+            <clipPath id="clip0_0_1">
+                <rect width="120" height="100" fill="white" />
+            </clipPath>
+        </defs>
+    </svg>
+
 </body>
 
 </html>
