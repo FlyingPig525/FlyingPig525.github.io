@@ -39,3 +39,54 @@ p {
 a {
     color: rgb(15, 212, 203);
 }
+
+:root {
+    --dark-grey: #3a3a3a;
+    --light-grey: #d9d9d9;
+}
+
+svg {
+    cursor: pointer;
+}
+
+#placeholder {
+    animation-name: flow;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+    animation-iteration-count: 1;
+}
+
+@keyframes flow {
+    from {
+        transform: translateY(250%);
+    }
+
+    to {
+        transform: translateY(0%);
+    }
+}
+
+#curveBox,
+#background,
+#mt1,
+#mt2,
+#Placeholder {
+    transition: all 1s ease 100ms;
+    transform-origin: bottom;
+}
+
+#curveBox {
+    transform-origin: center;
+}
+
+svg:hover #mt1 {
+    transform: scale(0.8);
+}
+
+svg:hover #mt2 {
+    transform: scale(1.1);
+}
+
+svg:hover #curveBox {
+    transform: scale(1.2) rotate(10deg);
+}

@@ -11,83 +11,33 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link href="./CSS/about.css" rel="stylesheet">
 
-<style>
-    :root {
-        --dark-color: #69ff5c;
-        --light-color: #5fdfa9;
-    }
-
-    svg {
-        cursor: pointer;
-    }
-
-    #darkGroup {
-        fill: var(--dark-color);
-    }
-
-    #lightGroup {
-        fill: var(--light-color);
-    }
-
-    #light1,
-    #dark1,
-    #light2 {
-        transition: all 1s ease;
-    }
-
-    #light2 {
-        transform: translateX(-100%);
-    }
-
-    .svg:hover #light1,
-    #dark1,
-    #light2 {
-        transform-origin: center;
-        transform: rotateY(90deg);
-    }
-
-    .svg:hover #dark1 {
-        transform: translateX(20%);
-    }
-
-    .svg:hover #light1 {
-        transform: translateX(40%);
-        opacity: 0;
-    }
-
-    .svg:hover #light2 {
-        transform: translateX(5%);
-    }
-</style>
-
 <body>
 
     <!-- TYPE TEXT ELEMENTS IN CAPS -->
     <!-- "i" = "(", "o" = ")" -->
 
-    <svg width="1200" height="1000" viewBox="0 0 120 100" fill="none" xmlns="http://www.w3.org/2000/svg" class="svg">
-        <rect width="120" height="100" fill="#1E1E1E" />
-        <g id="Triangles" clip-path="url(#clip0_0_1)">
-            <g id="lightGroup">
-                <path id="light1"
-                    d="M56.5 49.134C57.1667 49.5189 57.1667 50.4811 56.5 50.866L22 70.7846C21.3333 71.1695 20.5 70.6884 20.5 69.9186V30.0814C20.5 29.3116 21.3333 28.8305 22 29.2154L56.5 49.134Z"
-                    fill-opacity="0.5" />
-                <path id="light2"
-                    d="M41.5 49.134C42.1667 49.5189 42.1667 50.4811 41.5 50.866L7 70.7846C6.33333 71.1695 5.5 70.6884 5.5 69.9186V30.0814C5.5 29.3116 6.33333 28.8305 7 29.2154L41.5 49.134Z"
-                    fill-opacity="0.5" />
+    <a href="https://github.com" target="_blank" id="placeholderLink">
+        <svg width="360" height="320" viewBox="0 0 90 80" fill="none" xmlns="http://www.w3.org/2000/svg"
+            id="placeholder">
+            <rect width="90" height="80" fill="#1E1E1E" />
+            <g id="Placeholder">
+                <rect id="curveBox" x="21" y="14" width="47" height="51" rx="7" fill="#3A3A3A" />
+                <mask id="mask0_0_1" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="27" y="22" width="35"
+                    height="35">
+                    <circle id="circleMask" cx="44.5" cy="39.5" r="17.5" fill="#02A4FF" fill-opacity="0.68" />
+                </mask>
+                <g mask="url(#mask0_0_1)">
+                    <rect id="background" x="20" y="12" width="47" height="51" fill="black" />
+                    <path id="mt1"
+                        d="M37.1669 32.2547C37.5625 31.6589 38.4375 31.6589 38.8331 32.2547L56.8874 59.4469C57.3287 60.1115 56.8521 61 56.0543 61H19.9457C19.1479 61 18.6713 60.1115 19.1126 59.4469L37.1669 32.2547Z"
+                        fill="#D9D9D9" />
+                    <path id="mt2"
+                        d="M50.1402 37.4479C50.5277 36.7953 51.4723 36.7953 51.8598 37.4479L65.6914 60.7394C66.0872 61.406 65.6068 62.25 64.8316 62.25H37.1684C36.3932 62.25 35.9128 61.406 36.3086 60.7394L50.1402 37.4479Z"
+                        fill="#D9D9D9" />
+                </g>
             </g>
-            <g id="darkGroup">
-                <path id="dark1"
-                    d="M41.5 49.134C42.1667 49.5189 42.1667 50.4811 41.5 50.866L7 70.7846C6.33333 71.1695 5.5 70.6884 5.5 69.9186V30.0814C5.5 29.3116 6.33333 28.8305 7 29.2154L41.5 49.134Z"
-                    fill-opacity="0.5" />
-            </g>
-        </g>
-        <defs>
-            <clipPath id="clip0_0_1">
-                <rect width="120" height="100" fill="white" />
-            </clipPath>
-        </defs>
-    </svg>
+        </svg>
+    </a>
 
 </body>
 

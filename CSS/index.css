@@ -69,6 +69,7 @@ a:hover {
     color: #00ffa6;
     margin: 0.25%;
     font-size: 110%;
+
 }
 
 h3 {
@@ -93,5 +94,6 @@ h3 {
 }
 
 .links {
+    color: rgb(0, 180, 180);
     text-align: center;
 }
