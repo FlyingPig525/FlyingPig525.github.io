@@ -30,8 +30,12 @@ let money = 0;
 let moneyInc = 1;
 let incCost = 200;
 
-moneyCountText.innerHTML = 'Ω' + Math.round(money);
 
+function loadPage() {
+moneyCountText.innerHTML = 'Ω' + Math.round(money);
+}
+
+d.addEventListener('load', loadPage());
 
 function darkToLight() {
     if (currentMode === 'dark') {
@@ -59,7 +63,7 @@ function moneyClick() {
 function incUpgrade() {
     if (money >= incCost) {
         money -= incCost;
-        incCost *= 1.5;
+        incCost *= 2;
         moneyInc += Math.floor((moneyInc * 1.1));
         IncUpgrade.innerHTML = 'Increment The Increment <br>Costs: Ω' + Math.round(incCost);
         moneyCountText.innerHTML = 'Ω' + Math.round(money);
