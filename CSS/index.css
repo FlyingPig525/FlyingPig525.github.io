@@ -62,14 +62,14 @@ p {
 a {
     color: rgb(0, 180, 180);
     transition: all 1s cubic-bezier(0.02, 0.22, 0.07, 0.93) 100ms;
-    filter: blur(2px);
+    filter: blur(2px) !important;
 }
 
 a:hover {
     color: #00ffa6;
     margin: 0.25%;
     font-size: 110%;
-    filter: blur(0);
+    filter: blur(0px) !important;
 }
 
 h3 {
@@ -96,8 +96,4 @@ h3 {
 .links {
     color: rgb(0, 180, 180);
     text-align: center;
-}
-
-.links h3 {
-    filter: blur(1px);
 }

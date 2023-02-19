@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+body {
+    background-color: rgb(63, 63, 63);
+    transition: all 1s ease 100ms;
+    font-family: 'Ubuntu', sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+button {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 20px;
+    background-color: rgb(126, 126, 126);
+    color: white;
+    border: 2px;
+    border-color: black;
+    border-radius: 12px;
+    display: flex;
+    transition: all 1s ease 100ms;
+}
+
+
+h1 {
+    color: white;
+    transition: all 1s ease 100ms;
+}
+
+#darkLight {
+    display: flex;
+    align-self: flex-start !important;
+    justify-self: flex-start !important;
+    transition: all 1s ease 100ms;
+    background-color: white;
+    color: rgb(126, 126, 126);
+}
+
+#moneyBtn {
+    transition: all 0.7s ease 100ms;
+    font-size: 3rem;
+    align-self: center;
+    justify-self: center;
+}
+
+#moneyBtn:hover {
+    background-color: rgb(94, 94, 94);
+}
+
+#moneyCount {
+    align-self: center;
+    justify-self: center;
+    transition: all 1s ease 100ms;
+}
+
+#incUpgrade {
+    align-self: flex-end;
+    transition: all 1s ease 100ms;
+}
