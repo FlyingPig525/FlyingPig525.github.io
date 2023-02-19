@@ -1,0 +1,28 @@
+{
+  "name": "flyingpig525.github.io",
+  "version": "1.0.39",
+  "description": "My website",
+  "main": "index.js",
+  "scripts": {
+    "test": "Standard"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FlyingPig525/FlyingPig525.github.io.git"
+  },
+  "keywords": [
+    "web",
+    "HTML",
+    "JS",
+    "CSS"
+  ],
+  "author": "FlyingPig525",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/FlyingPig525/FlyingPig525.github.io/issues"
+  },
+  "homepage": "https://github.com/FlyingPig525/FlyingPig525.github.io#readme",
+  "dependencies": {
+    "animate.css": "^4.1.1"
+  }
+}

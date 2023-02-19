@@ -38,12 +38,14 @@ function darkToLight() {
         currentMode = 'light';
         btn.style.backgroundColor = buttonGrey;
         btn.style.color = 'white';
+        darkLight.innerHTML = 'Dark Mode'
         d.querySelector('body').style.backgroundColor = 'white';
         d.querySelector('h1').style.color = 'black';
     } else {
         currentMode = 'dark';
         btn.style.backgroundColor = 'white';
         btn.style.color = buttonGrey;
+        darkLight.innerHTML = 'Light Mode'
         d.querySelector('body').style.backgroundColor = bodyGrey;
         d.querySelector('h1').style.color = 'white';
     }
@@ -61,5 +63,8 @@ function incUpgrade() {
         moneyInc += Math.floor((moneyInc * 1.1));
         IncUpgrade.innerHTML = 'Increment The Increment <br>Costs: Ω' + Math.round(incCost);
         moneyCountText.innerHTML = 'Ω' + Math.round(money);
+        console.log('Inc Amount: ' + moneyInc);
+    } else {
+        alert('Not Enough Ωs!')
     }
 }
