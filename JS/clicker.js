@@ -1,3 +1,22 @@
+/*
+ This is my first time using JS in an actual website!!!
+ __     __     __
+|  |   |  |   |__|
+|  |   |  |    __
+|  |___|  |   |  |
+|  |___|  |   |  |
+|  |   |  |   |  |
+|__|   |__|   |__|
+   
+    why are you snooping around in my code?
+    are you trying to find a secret?
+    because you wont
+    stop trying
+    i wont allow it
+    no
+    stop
+    bad
+*/
 const buttonGrey = 'rgb(126, 126, 126)';
 const bodyGrey = 'rgb(63, 63, 63)';
 const d = document;
