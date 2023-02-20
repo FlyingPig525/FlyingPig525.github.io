@@ -24,15 +24,24 @@ const darkLight = d.getElementById('darkLight');
 const btn = d.querySelector('button');
 const moneyCountText = d.getElementById('moneyCount');
 const IncUpgrade = d.getElementById('incUpgrade');
+const autoClickUpgrade = d.getElementById('autoUpgrade');
 
 let currentMode = 'dark';
 let money = 0;
 let moneyInc = 1;
 let incCost = 200;
+let autoClickCost = 3000;
+let autoClickers = 0;
+let autoClickerAction = setInterval(function() {
+    money += autoClickers * moneyInc;
+    console.log('+' + (moneyInc * autoClickers));
+    moneyCountText.innerHTML = 'Ω' + Math.round(money);
+}, 200);
 
 
 function loadPage() {
-moneyCountText.innerHTML = 'Ω' + Math.round(money);
+    moneyCountText.innerHTML = 'Ω' + Math.round(money);
+    autoClickerAction;
 }
 
 d.addEventListener('load', loadPage());
@@ -69,6 +78,19 @@ function incUpgrade() {
         moneyCountText.innerHTML = 'Ω' + Math.round(money);
         console.log('Inc Amount: ' + moneyInc);
     } else {
-        alert('Not Enough Ωs!')
+        alert('Not Enough Ωs!');
+    }
+}
+
+function autoUpgrade() {
+    if (money >= autoClickCost) {
+        money -= autoClickCost;
+        autoClickCost += Math.ceil(autoClickCost * 1.6);
+        autoClickers++;
+        autoClickUpgrade.innerHTML = 'Purchase an Auto Clicker <br>Costs: Ω' + autoClickCost;
+        moneyCountText.innerHTML = 'Ω' + Math.round(money);
+        console.log('Auto Clickers: ' + autoClickers);
+    } else {
+        alert('Not Enough Ωs!');
     }
 }

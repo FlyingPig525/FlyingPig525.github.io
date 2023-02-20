@@ -37,9 +37,11 @@ h1 {
 
 #moneyBtn {
     transition: all 0.7s ease 100ms;
-    font-size: 3rem;
+    text-align: center;
+    font-size: 2.9vw;
     align-self: center;
     justify-self: center;
+    width: 15vw;
 }
 
 #moneyBtn:hover {
@@ -50,9 +52,20 @@ h1 {
     align-self: center;
     justify-self: center;
     transition: all 1s ease 100ms;
+    font-size: 2vw;
 }
 
 #incUpgrade {
     align-self: flex-end;
     transition: all 1s ease 100ms;
+    text-align: center;
+    width: 10vw;
+}
+
+#autoUpgrade {
+    margin-top: 3px;
+    align-self: flex-end;
+    transition: all 1s ease 100ms;
+    text-align: center;
+    width: 10vw;
 }
