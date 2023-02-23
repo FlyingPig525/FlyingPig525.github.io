@@ -1,5 +1,5 @@
 <svg width="50" height="91" viewBox="0 0 50 91" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect width="50" height="91" fill="#1E1E1E"/>
+<rect width="50" height="91" fill="#1E1E1E" fill-opacity="0"/>
 <g id="Orange">
 <rect id="Body" x="7.5" y="18.5" width="35" height="72" rx="17.5" fill="#FF7A00" stroke="black"/>
 <g id="Leafs">

@@ -20,11 +20,11 @@ html::-webkit-scrollbar {
     display: none;
 }
 
-.enemies {
+.enemyWrapper {
     text-align: center;
 }
 
-.enemies>.one {
+.enemyWrapper>.enemies {
     transform: translateY(-50px);
     transition: all 1s cubic-bezier(0.5, 1, 0.5, 0);
     position: absolute;
@@ -32,4 +32,48 @@ html::-webkit-scrollbar {
     top: 50vh;
     transform-origin: center;
     z-index: 2;
+}
+
+.enemyWrapper>.two {
+    transform: translateX(100px) translateY(-50px);
+    transition: all 1s cubic-bezier(0.5, 1, 0.5, 0);
+    position: absolute;
+    left: 50vw;
+    top: 50vh;
+    transform-origin: center;
+    z-index: 2;
+}
+
+.enemyWrapper>.three {
+    transform: translateX(150px) translateY(-50px);
+    transition: all 1s cubic-bezier(0.5, 1, 0.5, 0);
+    position: absolute;
+    left: 50vw;
+    top: 50vh;
+    transform-origin: center;
+    z-index: 2;
+}
+
+.enemyWrapper>.four {
+    transform: translateX(200px) translateY(-50px);
+    transition: all 1s cubic-bezier(0.5, 1, 0.5, 0);
+    position: absolute;
+    left: 50vw;
+    top: 50vh;
+    transform-origin: center;
+    z-index: 2;
+}
+
+.startWrapper {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+.start {
+    transform: translateY(0%);
+    border-radius: 50px;
+    font-size: 10rem;
+    background: linear-gradient(-45deg, #ff003f, #ffa500);
+    transition: all 1s ease;
 }
