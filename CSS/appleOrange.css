@@ -2,7 +2,6 @@
 
 html {
     font-family: 'Nunito', sans-serif;
-    cursor: none;
 }
 
 body {
@@ -13,11 +12,8 @@ body {
 }
 
 .playerWrapper>.player {
-    width: 50px;
-    height: 50px;
-    background-color: red;
-    border-radius: 30px;
     transform: translateY(-85px);
+    position: absolute;
 }
 
 html::-webkit-scrollbar {
@@ -29,9 +25,11 @@ html::-webkit-scrollbar {
 }
 
 .enemies>.one {
-    width: 50px;
-    height: 100px;
     transform: translateY(-50px);
-    background-color: orange;
-    transition: all 5s;
+    transition: all 1s cubic-bezier(0.5, 1, 0.5, 0);
+    position: absolute;
+    left: 50vw;
+    top: 50vh;
+    transform-origin: center;
+    z-index: 2;
 }

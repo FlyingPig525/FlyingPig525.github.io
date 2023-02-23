@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,15 +9,75 @@
     <link rel="stylesheet" href="./CSS/appleOrange.css">
     <title>Google</title>
 </head>
+
 <body>
     <div class="enemies">
-        <div class="enemies one"></div>
+        <svg width="90" height="131" viewBox="0 0 50 91" fill="none" xmlns="http://www.w3.org/2000/svg"
+            class="enemies one">
+            <rect width="50" height="91" fill="#1E1E1E" fill-opacity="0" />
+            <g id="Orange">
+                <rect id="Body" x="7.5" y="18.5" width="35" height="72" rx="17.5" fill="#FF7A00" stroke="black" />
+                <g id="Leafs">
+                    <path id="Leaf"
+                        d="M25.6891 17.5705L24.5925 18.6155C24.3813 18.8168 24.3952 19.1647 24.6236 19.3461C32.5041 25.6016 39.2527 8.76465 32.7768 4.32142C32.4909 4.12522 32.1181 4.32164 32.0767 4.66596L32.0518 4.87284C31.47 9.71591 29.2204 14.2054 25.6891 17.5705Z"
+                        fill="#1CC700" stroke="black" stroke-width="0.5" />
+                    <path id="Leaf_2"
+                        d="M24.8584 17.4978L24.2242 18.6077C24.0969 18.8305 24.1669 19.122 24.3858 19.2558C30.8181 23.1883 33.1947 7.79848 28.1763 4.8101C27.871 4.62826 27.5259 4.8885 27.5495 5.24312L27.5788 5.68195C27.8535 9.80236 26.9072 13.9123 24.8584 17.4978Z"
+                        fill="#1CC700" stroke="black" stroke-width="0.5" />
+                </g>
+                <g id="Eyes">
+                    <path id="eye1"
+                        d="M23.75 45C23.75 45.995 23.1451 46.9264 22.104 47.6204C21.0646 48.3133 19.6144 48.75 18 48.75C16.3856 48.75 14.9354 48.3133 13.896 47.6204C12.8549 46.9264 12.25 45.995 12.25 45C12.25 44.005 12.8549 43.0736 13.896 42.3796C14.9354 41.6867 16.3856 41.25 18 41.25C19.6144 41.25 21.0646 41.6867 22.104 42.3796C23.1451 43.0736 23.75 44.005 23.75 45Z"
+                        fill="white" stroke="black" stroke-width="0.5" />
+                    <path id="eye2"
+                        d="M37.75 45C37.75 45.995 37.1451 46.9264 36.104 47.6204C35.0646 48.3133 33.6144 48.75 32 48.75C30.3856 48.75 28.9354 48.3133 27.896 47.6204C26.8549 46.9264 26.25 45.995 26.25 45C26.25 44.005 26.8549 43.0736 27.896 42.3796C28.9354 41.6867 30.3856 41.25 32 41.25C33.6144 41.25 35.0646 41.6867 36.104 42.3796C37.1451 43.0736 37.75 44.005 37.75 45Z"
+                        fill="white" stroke="black" stroke-width="0.5" />
+                    <circle id="pupil1" cx="18" cy="45" r="1" fill="black" />
+                    <circle id="pupil2" cx="32" cy="45" r="1" fill="black" />
+                </g>
+                <path id="Mouth"
+                    d="M32.6818 57H18.3182C18.1552 57 18.0344 57.1513 18.0705 57.3102C19.8676 65.2175 31.1324 65.2175 32.9295 57.3102C32.9656 57.1513 32.8448 57 32.6818 57Z"
+                    fill="white" stroke="black" stroke-width="0.5" />
+            </g>
+        </svg>
     </div>
     <div class="playerWrapper">
-        <div class="player"></div>
+        <svg width="80" height="80" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg"
+            class="playerWrapper player">
+            <rect width="50" height="50" fill="#1E1E1E" fill-opacity="0" />
+            <g id="Frame 1">
+                <circle id="Body" cx="25.5" cy="25.5" r="17.25" fill="#FF0000" stroke="black" stroke-width="0.5" />
+                <g id="eyes">
+                    <circle id="Ellipse 1" cx="17.5" cy="20.5" r="3.25" fill="#D9D9D9" stroke="black"
+                        stroke-width="0.5" />
+                    <circle id="Ellipse 2" cx="33.5" cy="20.5" r="3.25" fill="#D9D9D9" stroke="black"
+                        stroke-width="0.5" />
+                    <circle id="Ellipse 3" cx="17.5" cy="20.5" r="0.25" fill="black" stroke="black"
+                        stroke-width="0.5" />
+                    <circle id="Ellipse 4" cx="33.5" cy="20.5" r="0.25" fill="black" stroke="black"
+                        stroke-width="0.5" />
+                </g>
+                <g id="mouth">
+                    <rect id="Rectangle 1" x="14.25" y="27.25" width="22.5" height="8.5" rx="3.75" fill="#D9D9D9"
+                        stroke="black" stroke-width="0.5" />
+                    <rect id="Rectangle 2" x="21.25" y="32.25" width="14.5" height="3.5" rx="1.75" fill="#FF758D"
+                        stroke="black" stroke-width="0.5" />
+                </g>
+                <g id="leaves">
+                    <path id="Leaf"
+                        d="M25.3661 9.70331L25.1549 10.1161C25.0648 10.2923 25.1142 10.5139 25.2799 10.6222C28.9312 13.0097 30.2974 3.38354 27.5375 1.27914C27.3215 1.11447 27.0534 1.30473 27.0696 1.57582C27.2375 4.38848 26.6493 7.1948 25.3661 9.70331Z"
+                        fill="#1CC700" stroke="black" stroke-width="0.5" />
+                    <path id="Leaf_2"
+                        d="M26.0379 9.34841L25.4596 9.80064C25.3019 9.92402 25.2891 10.1623 25.4371 10.2971C29.7553 14.229 34.4843 4.93725 30.8972 2.04367C30.7404 1.91725 30.5152 2.01277 30.4742 2.20992C29.8858 5.03906 28.3141 7.56822 26.0379 9.34841Z"
+                        fill="#1CC700" stroke="black" stroke-width="0.5" />
+                </g>
+            </g>
+        </svg>
+
     </div>
 
 
     <script src="./JS/AppleOrange/appleOrange.js"></script>
 </body>
+
 </html>

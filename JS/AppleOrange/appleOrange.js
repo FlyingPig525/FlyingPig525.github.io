@@ -2,29 +2,32 @@ const d = document;
 const player = d.getElementsByClassName('player')[0];
 const e = d.getElementsByClassName('one')[0];
 let mouseX, mouseY;
-let dead = 0;
+let dead = false;
 let enemyToX, enemyToY;
 
 // On mousemove use event.clientX and event.clientY to set the location of the div to the location of the cursor:
 d.addEventListener('mousemove', (event) => {
-    mouseX = event.clientX - 22;
-    mouseY = event.clientY - 22;
-    document.getElementsByClassName('player')[0].style.marginLeft = mouseX + 'px';
-    document.getElementsByClassName('player')[0].style.marginTop = mouseY + 'px';
+    if (dead === false) {
+        mouseX = event.clientX - 35;
+        mouseY = event.clientY + 60;
+        document.getElementsByClassName('player')[0].style.left = mouseX + 'px';
+        document.getElementsByClassName('player')[0].style.top = mouseY + 'px';
+    }
 });
 
 // Check if cursor hovers over an enemy
-e.addEventListener('mouseover', () => {
-    dead++;
+e.addEventListener('mouseover', function () {
+    if (dead === false) {
+        dead = true;
+        console.log('You died')
+    }
 });
 
 setInterval(function () {
-    enemyToX = mouseX;
-    enemyToY = mouseY;
-    e.style.position = 'absolute';
-    e.style.left = enemyToX-10 + 'px';
-    e.style.top = enemyToY-10 + 'px';
-    if (dead === 2) {
-        console.log('ded')
+    if (dead === false) {
+        enemyToX = mouseX;
+        enemyToY = mouseY;
+        e.style.left = enemyToX + 'px';
+        e.style.top = enemyToY - 50 + 'px';
     }
 }, 500)

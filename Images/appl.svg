@@ -1,0 +1,20 @@
+<svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="50" height="50" fill="#1E1E1E"/>
+<g id="Frame 1">
+<circle id="Body" cx="25.5" cy="25.5" r="17.25" fill="#FF0000" stroke="black" stroke-width="0.5"/>
+<g id="eyes">
+<circle id="Ellipse 1" cx="17.5" cy="20.5" r="3.25" fill="#D9D9D9" stroke="black" stroke-width="0.5"/>
+<circle id="Ellipse 2" cx="33.5" cy="20.5" r="3.25" fill="#D9D9D9" stroke="black" stroke-width="0.5"/>
+<circle id="Ellipse 3" cx="17.5" cy="20.5" r="0.25" fill="black" stroke="black" stroke-width="0.5"/>
+<circle id="Ellipse 4" cx="33.5" cy="20.5" r="0.25" fill="black" stroke="black" stroke-width="0.5"/>
+</g>
+<g id="mouth">
+<rect id="Rectangle 1" x="14.25" y="27.25" width="22.5" height="8.5" rx="3.75" fill="#D9D9D9" stroke="black" stroke-width="0.5"/>
+<rect id="Rectangle 2" x="21.25" y="32.25" width="14.5" height="3.5" rx="1.75" fill="#FF758D" stroke="black" stroke-width="0.5"/>
+</g>
+<g id="leaves">
+<path id="Leaf" d="M25.3661 9.70331L25.1549 10.1161C25.0648 10.2923 25.1142 10.5139 25.2799 10.6222C28.9312 13.0097 30.2974 3.38354 27.5375 1.27914C27.3215 1.11447 27.0534 1.30473 27.0696 1.57582C27.2375 4.38848 26.6493 7.1948 25.3661 9.70331Z" fill="#1CC700" stroke="black" stroke-width="0.5"/>
+<path id="Leaf_2" d="M26.0379 9.34841L25.4596 9.80064C25.3019 9.92402 25.2891 10.1623 25.4371 10.2971C29.7553 14.229 34.4843 4.93725 30.8972 2.04367C30.7404 1.91725 30.5152 2.01277 30.4742 2.20992C29.8858 5.03906 28.3141 7.56822 26.0379 9.34841Z" fill="#1CC700" stroke="black" stroke-width="0.5"/>
+</g>
+</g>
+</svg>
