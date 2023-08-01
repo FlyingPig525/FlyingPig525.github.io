@@ -26,6 +26,10 @@ h1 {
     transition: all 1s ease 100ms;
 }
 
+h3 {
+    color: rgb(202, 202, 202);
+}
+
 #darkLight {
     display: flex;
     align-self: flex-start !important;
@@ -55,6 +59,13 @@ h1 {
     font-size: 2vw;
 }
 
+#moneyPerSec {
+    align-self: center;
+    justify-self: center;
+    transition: all 1s ease 100ms;
+    font-size: 1.2vw;
+}
+
 #incUpgrade {
     align-self: flex-end;
     transition: all 1s ease 100ms;
@@ -68,4 +79,18 @@ h1 {
     transition: all 1s ease 100ms;
     text-align: center;
     width: 10vw;
+}
+
+#save {
+    margin-top: 10vw;
+    align-self: flex-end;
+    transition: all 1s ease 100ms;
+    width: 3vw;
+}
+
+#load {
+    margin-top: 1vw;
+    align-self: flex-end;
+    transition: all 1s ease 100ms;
+    width: 3vw;
 }
