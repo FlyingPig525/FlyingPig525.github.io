@@ -113,3 +113,17 @@ function save() {
   d.querySelector('body').style.fontSize = '2rem';
   d.querySelector('body').style.wordBreak = 'break-word';
 }
+
+function load() {
+  const jsonData = JSON.parse(atob(prompt('Submit encoded savedata.')));
+  if (jsonData != undefined) {
+    money = jsonData.money;
+    autoClickers = jsonData.autoClickers;
+    moneyInc = jsonData.moneyInc;
+    autoClickCost = jsonData.autoClickCost;
+    incCost = jsonData.incCost;
+    alert('Success!');
+  } else {
+    console.error('jsonData = undefined :(', jsonData);
+  }
+}
