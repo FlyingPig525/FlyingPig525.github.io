@@ -25,7 +25,7 @@ const d = document;
 const darkLight = d.getElementById('darkLight');
 const btn = d.querySelector('button');
 const moneyCountText = d.getElementById('moneyCount');
-const incUpgrade = d.getElementById('incUpgrade');
+const IncUpgrade = d.getElementById('incUpgrade');
 const autoClickUpgrade = d.getElementById('autoUpgrade');
 const moneyPerSecText = d.getElementById('moneyPerSec');
 
@@ -43,7 +43,7 @@ let autoClickers = 0;
 
 function setText() {
   moneyCountText.innerHTML = 'Ω' + Math.round(money);
-  incUpgrade.innerHTML =
+  IncUpgrade.innerHTML =
     'Increment The Increment <br>Costs: Ω' + Math.round(incCost);
   autoClickUpgrade.innerHTML =
     'Purchase an Auto Clicker <br>Costs: Ω' + autoClickCost;
