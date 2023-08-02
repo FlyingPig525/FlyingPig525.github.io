@@ -16,7 +16,8 @@
     no
     stop
     bad
-*/
+    ps. super secret load code: eyJtb25leSI6MSwiYXV0b0NsaWNrZXJzIjowLCJtb25leUluYyI6MSwiYXV0b0NsaWNrQ29zdCI6MCwiaW5jQ29zdCI6MH0=
+    */
 const buttonGrey = 'rgb(126, 126, 126)';
 const bodyGrey = 'rgb(63, 63, 63)';
 const subGrey = 'rgb(202, 202, 202)';
@@ -30,8 +31,7 @@ const moneyPerSecText = d.getElementById('moneyPerSec');
 
 const autoClickerAction = setInterval(function () {
   money += autoClickers * moneyInc;
-  moneyCountText.innerHTML = 'Ω' + Math.round(money);
-  moneyPerSecText.innerHTML = `Ω${autoClickers * moneyInc * 5} per second`;
+  setText();
 }, 200);
 
 let currentMode = 'dark';
@@ -41,9 +41,18 @@ let incCost = 200;
 let autoClickCost = 3000;
 let autoClickers = 0;
 
-function loadPage() {
+function setText() {
   moneyCountText.innerHTML = 'Ω' + Math.round(money);
+  IncUpgrade.innerHTML =
+    'Increment The Increment <br>Costs: Ω' + Math.round(incCost);
+  autoClickUpgrade.innerHTML =
+    'Purchase an Auto Clicker <br>Costs: Ω' + autoClickCost;
+  moneyPerSecText.innerHTML = `Ω${autoClickers * moneyInc * 5} per second`;
+}
+
+function loadPage() {
   autoClickerAction;
+  setText();
 }
 
 d.addEventListener('load', loadPage());
@@ -76,10 +85,7 @@ function incUpgrade() {
     money -= incCost;
     incCost *= 2;
     moneyInc += Math.floor(moneyInc * 1.1);
-    IncUpgrade.innerHTML =
-      'Increment The Increment <br>Costs: Ω' + Math.round(incCost);
-    moneyCountText.innerHTML = 'Ω' + Math.round(money);
-    console.log('Inc Amount: ' + moneyInc);
+    setText();
   } else {
     alert('Not Enough Ωs!');
   }
@@ -90,10 +96,7 @@ function autoUpgrade() {
     money -= autoClickCost;
     autoClickCost += Math.ceil(autoClickCost * 1.6);
     autoClickers++;
-    autoClickUpgrade.innerHTML =
-      'Purchase an Auto Clicker <br>Costs: Ω' + autoClickCost;
-    moneyCountText.innerHTML = 'Ω' + Math.round(money);
-    console.log('Auto Clickers: ' + autoClickers);
+    setText();
   } else {
     alert('Not Enough Ωs!');
   }
@@ -115,15 +118,18 @@ function save() {
 }
 
 function load() {
-  const jsonData = JSON.parse(atob(prompt('Submit encoded savedata.')));
+  let data = prompt('Submit encoded savedata.');
+  const jsonData = JSON.parse(atob(data));
   if (jsonData != undefined) {
     money = jsonData.money;
     autoClickers = jsonData.autoClickers;
     moneyInc = jsonData.moneyInc;
     autoClickCost = jsonData.autoClickCost;
     incCost = jsonData.incCost;
+    setText();
     alert('Success!');
   } else {
     console.error('jsonData = undefined :(', jsonData);
+    alert('nope');
   }
 }
