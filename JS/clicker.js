@@ -1,12 +1,12 @@
 /*
  This is my first time using JS in an actual website!!!
- __     __     __
-|  |   |  |   |__|
-|  |   |  |    __
-|  |___|  |   |  |
-|  |___|  |   |  |
-|  |   |  |   |  |
-|__|   |__|   |__|
+     __     __     __
+    |  |   |  |   |__|
+    |  |   |  |    __
+    |  |___|  |   |  |
+    |  |___|  |   |  |
+    |  |   |  |   |  |
+    |__|   |__|   |__|
    
     why are you snooping around in my code?
     are you trying to find a secret?
@@ -28,11 +28,13 @@ const moneyCountText = d.getElementById('moneyCount');
 const IncUpgrade = d.getElementById('incUpgrade');
 const autoClickUpgrade = d.getElementById('autoUpgrade');
 const moneyPerSecText = d.getElementById('moneyPerSec');
+const statText = d.getElementById('stats');
+const cooldownText = d.getElementById('autoCooldownUpgrade');
 
 const autoClickerAction = setInterval(function () {
   money += autoClickers * moneyInc;
   setText();
-}, 200);
+}, clickTime);
 
 let currentMode = 'dark';
 let money = 0;
@@ -41,6 +43,8 @@ let incCost = 200;
 let autoClickCost = 3000;
 let autoClickers = 0;
 let saveTimer = 0;
+let clickTime = 2000;
+let clickTimeCost = 4500;
 
 function setText() {
   moneyCountText.innerHTML = 'Ω' + Math.round(money);
@@ -49,6 +53,8 @@ function setText() {
   autoClickUpgrade.innerHTML =
     'Purchase an Auto Clicker <br>Costs: Ω' + autoClickCost;
   moneyPerSecText.innerHTML = `Ω${autoClickers * moneyInc * 5} per second`;
+  statText.innerHTML = `Inc: ${moneyInc} Autoclickers: ${autoClickers}`
+  cooldownText.innerHTML = `Lower Autoclick cooldown <br>Costs: Ω${clickTimeCost}`
 }
 
 function loadPage() {
@@ -94,8 +100,8 @@ function moneyClick() {
 function incUpgrade() {
   if (money >= incCost) {
     money -= incCost;
-    incCost *= 2;
-    moneyInc += Math.floor(moneyInc * 1.1);
+    incCost = Math.ceil(incCost * 1.6);
+    moneyInc += Math.floor((moneyInc * 0.4) + 1);
     setText();
   } else {
     alert('Not Enough Ωs!');
@@ -110,6 +116,17 @@ function autoUpgrade() {
     setText();
   } else {
     alert('Not Enough Ωs!');
+  }
+}
+
+function autoCooldownUpgrade() {
+  if (clickTime > 100 && money >= clickTimeCost) {
+    money -= clickTimeCost;
+    clickTime -= 100;
+    clickTimeCost = Math.ceil(clickTimeCost * 1.6);
+    setText();
+  } else {
+    alert('Not Enough Ωs or Cooldown too Low! (cannot go below 0.1)');
   }
 }
 
