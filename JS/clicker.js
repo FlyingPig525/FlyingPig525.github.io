@@ -40,6 +40,7 @@ let moneyInc = 1;
 let incCost = 200;
 let autoClickCost = 3000;
 let autoClickers = 0;
+let saveTimer = 0;
 
 function setText() {
   moneyCountText.innerHTML = 'Ω' + Math.round(money);
@@ -51,6 +52,16 @@ function setText() {
 }
 
 function loadPage() {
+  const localStorageSave = localStorage.getItem('save');
+  if (localStorageSave != null) {
+    let jsonData = JSON.parse(atob(localStorageSave));
+    money = jsonData.money;
+    autoClickers = jsonData.autoClickers;
+    moneyInc = jsonData.moneyInc;
+    autoClickCost = jsonData.autoClickCost;
+    incCost = jsonData.incCost;
+  }
+
   autoClickerAction;
   setText();
 }
@@ -102,7 +113,7 @@ function autoUpgrade() {
   }
 }
 
-function save() {
+async function save() {
   let jsonData = {};
   jsonData.money = money;
   jsonData.autoClickers = autoClickers;
@@ -111,15 +122,27 @@ function save() {
   jsonData.incCost = incCost;
   encodedJSON = btoa(JSON.stringify(jsonData));
   console.log(encodedJSON, jsonData);
-  d.querySelector('body').innerHTML = encodedJSON;
-  d.querySelector('body').style.color = 'white';
-  d.querySelector('body').style.fontSize = '2rem';
-  d.querySelector('body').style.wordBreak = 'break-word';
+  if (saveTimer == 1) {
+    d.querySelector('body').innerHTML = encodedJSON;
+    d.querySelector('body').style.color = 'white';
+    d.querySelector('body').style.fontSize = '2rem';
+    d.querySelector('body').style.wordBreak = 'break-word';
+  } else {
+    alert(
+      'Click save again in 5 seconds to display a savedata code, or data will be saved in localstorage'
+    );
+    localStorage.setItem('save', encodedJSON);
+    saveTimer = 1;
+    setTimeout(_ => {
+      saveTimer = 0;
+      console.log('awdi');
+    }, 5000);
+  }
 }
 
 function load() {
   let data = prompt('Submit encoded savedata.');
-  const jsonData = JSON.parse(atob(data));
+  let jsonData = JSON.parse(atob(data));
   if (jsonData != undefined) {
     money = jsonData.money;
     autoClickers = jsonData.autoClickers;

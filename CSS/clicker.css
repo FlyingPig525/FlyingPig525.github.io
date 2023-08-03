@@ -70,27 +70,31 @@ h3 {
     align-self: flex-end;
     transition: all 1s ease 100ms;
     text-align: center;
-    width: 10vw;
+    width: fit-content;
+    max-width: 20vw;
+    word-break: break-all;
 }
 
 #autoUpgrade {
-    margin-top: 3px;
+    margin-top: 10px;
     align-self: flex-end;
     transition: all 1s ease 100ms;
     text-align: center;
-    width: 10vw;
+    width: fit-content;
+    max-width: 20vw;
+    word-break: break-all;
 }
 
 #save {
     margin-top: 10vw;
     align-self: flex-end;
     transition: all 1s ease 100ms;
-    width: 3vw;
+    width: fit-content;
 }
 
 #load {
     margin-top: 1vw;
     align-self: flex-end;
     transition: all 1s ease 100ms;
-    width: 3vw;
+    width: fit-content;
 }
