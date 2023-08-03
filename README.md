@@ -5,4 +5,16 @@
 Right-click and open in new tab.
 
 # https://flyingpig525.github.io/clicker.html
-Right-click and open in new tab for my first JS project.
+Right-click and open in new tab. 
+
+why
+
+why
+
+why
+
+why
+
+why
+
+why
