@@ -1,5 +1,4 @@
 /*
- This is my first time using JS in an actual website!!!
      __     __     __
     |  |   |  |   |__|
     |  |   |  |    __
@@ -16,7 +15,7 @@
     no
     stop
     bad
-    ps. super secret load code: eyJtb25leSI6MSwiYXV0b0NsaWNrZXJzIjowLCJtb25leUluYyI6MSwiYXV0b0NsaWNrQ29zdCI6MCwiaW5jQ29zdCI6MH0=
+    ps. secret load code: eyJtb25leSI6MSwiYXV0b0NsaWNrZXJzIjowLCJtb25leUluYyI6MSwiYXV0b0NsaWNrQ29zdCI6MCwiaW5jQ29zdCI6MH0=
     */
 const buttonGrey = 'rgb(126, 126, 126)';
 const bodyGrey = 'rgb(63, 63, 63)';
